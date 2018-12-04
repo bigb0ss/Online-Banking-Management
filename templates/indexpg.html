@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banking Maintanence System</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+	li{
+		list-style-type: none;
+	}
+	input{
+		border-radius: 20px;
+		background-color: lightgreen;
+		color:darkblue;
+	}
+	.v
+			{
+				margin-left: 500px;
+			}
+	.admn{
+		border-radius: 50px;
+	}
+	#hd{
+		margin-top: 20px;
+		margin-left: 60px;
+	}
+</style>
+
+<body align="center">
+
+	<br><br>
+	<h1 align="center" class="display-5"> Welcome to SCS Bank</h1>
+	<br><br>
+
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-1"></div>
+		<div class="card col-md-4">
+			<div class="card-header btn btn-block bg-warning">
+				<h3>Existing Banker</h3>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md">
+						<form method="POST" class="btn btn-block" action="/log">
+							<ul>
+							<li><br></li>
+							<li><input type="text" placeholder="User ID / Name" name="u"></li>
+							<li><br></li>
+							<li><input type="password" placeholder="password" name="p"></li>
+							<li><hr></li>
+							<div class="bg-primary btn btn-block">
+								<li><input type="submit" class="btn btn-danger" value="Login"></li>
+							</div>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2"></div>
+		<div class="card col-md-4">
+			<div class="card-header btn btn-block bg-warning">
+				<h3>New Banker</h3>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md">
+						<form method="get" class="bg-info btn btn-block" action="/reg">
+							<ul>
+							<li><br></li>
+							<li><label>Are you a New Here!!</label></li>
+							<li><br></li>
+							<li><label>Just Complete the Registration for an A/C</label> </li>
+							<li><hr></li>
+							<div class="bg-primary btn btn-block">
+								<li><input type="submit" class="btn btn-danger" value="Create A/C"></li>
+							</div>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>	
+	</div>
+	<div class="card admn bg-warning">
+		<h3 id="hd">Admin Panel</h3>
+		<input class="v" type="text" id="user" placeholder="Admin Username"><br><br>
+		<input class="v" type="password" id="pass" placeholder="Admin Password"><br><br>
+		<button type="submit" datatarget="#log" class="btn btn-success v" id="login">Admin Login</button>
+		<br><br>
+	</div>
+</body>
+
+<script type="text/javascript">
+      var x=document.getElementById('login');
+      function click1()
+      {
+        var u=document.getElementById('user');
+        u=u.value;
+        var p=document.getElementById('pass');
+        p=p.value;
+        var z=false
+        if(u=='bankadmin')
+        {
+            z=true;
+        }
+        if(p=='admin1234' && z)
+          z=true;
+        else {
+          z=false;
+          window.alert("Check username/password");
+        }
+        if(z)
+          window.location="/admin";
+      }
+      x.addEventListener('click',click1,false);
+      </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+
+</html>

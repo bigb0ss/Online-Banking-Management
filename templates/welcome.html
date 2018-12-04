@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome Banker</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+	<style type="text/css">
+		td{
+			text-align: center;
+			margin-left: 300;
+		}
+		input{
+		border-radius: 20px;
+		background-color: lightgreen;
+		color:darkblue;
+	}
+	</style>
+</head>
+<body>
+		<div class="jumbotron-fluid">
+			<h1 class="display-5">Account Details</h1>
+			<div class="card">
+				<table align="center">
+					<tbody>
+						<tr>
+							<td>Name</td><td class='btn'>:</td>
+							<td class="btn"><h5>{{name}}</h5></td>
+						</tr>
+						<tr>
+							<td>Account Number</td><td class='btn'>:</td>
+							<td class='btn'><h5>{{ac}}</h5></td>
+						</tr>
+						<tr>
+							<td>Pan No</td><td class='btn'>:</td>
+							<td class='btn'><h5>{{pan}}</h5></td>
+						</tr>
+						<tr>
+							<td>Account Type</td><td class='btn'>:</td>
+							<td class='btn'><h5>{{tp}}</h5></td>
+						</tr>
+						<tr>
+							<td>Mobile No</td><td class='btn'>:</td>
+							<td class='btn'><h5>{{mob}}</h5></td>
+						</tr>
+						<tr>
+							<td>Account Balence</td><td class='btn'>:</td>
+							<td class="bg-success btn"><h5>{{bal}}</h5></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h1>Transactions</h1>
+			<div class="card" align="center">
+				<form method="POST" action="/trans">
+					<label>Your A/C No :</label><input type="text" name='accc' placeholder="your A/c no" value="{{ac}}">
+					<label>Payee A/C No :</label><input type="text" name="payee" placeholder="Payee A/C No">
+					<LABEL>Amount :</LABEL><input type="text" name="bal" placeholder="Amount">
+					<input type="submit" value="Transfer" class="btn btn-success">
+				</form>
+			</div>
+			<div class="card">
+				<form  method="GET" action="/">
+					<br><br>
+					<input type="submit" value="Logout" class="btn btn-danger btn-block">
+				</form>
+			</div>
+		</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+</html>

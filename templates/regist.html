@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Your Account Here</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+		<style type="text/css">
+			input
+			{
+				border-radius: 20px;
+				background-color: lightgreen;
+				color:darkblue;
+				
+			}
+			.v
+			{
+				margin-left: 500px;
+			}
+		</style>
+
+</head>
+<body align="center">
+	<h1>Create Your Account Here</h1>
+	<form action="/db" method="POST" class="jumbotron">
+		<input class="v" type='text' placeholder="Name /username" name='n1'><br>
+		<input class="v" type="text" placeholder="Pan No" name='n2'><br>
+		<input class="v" type="text" list="ld" placeholder="A/C type" name='n3'><br>
+		<input class="v" type="text" placeholder= "Mobile No" name='n4'><br>
+		<input class="v" type="text" placeholder="Min Balence (5000)" name='n5'><br>
+		<input class="v" type="password" name="n6" placeholder="password"><br>
+		<input type="submit" class="btn btn-block btn-primary" value="Create">
+	</form>
+	<datalist id="ld">
+		<option>Savings</option>
+		<option>Current</option>
+		<option>Corporate</option>
+	</datalist>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+</html>

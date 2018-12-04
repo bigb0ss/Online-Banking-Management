@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Control Panel</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+	<style type="text/css">
+		.table-dark
+		{
+			color: #fff;
+            background-color: #373a3c;
+		}
+		th{
+			text-align: center;
+		}
+		.h{
+			margin-left: 1150px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Admin Control</h1><a href="/"><button class="btn btn-danger h">Logout </button></a>
+	<table class="table table-dark">
+		<thead>
+			<tr class="bg-success">
+				<th>Transaction ID</th>
+				<th>Sender A/C</th>
+				<th>Receiver A/c</th>
+				<th>Amount Transfered</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for d in details %}
+				<tr>
+					<th scope="row">{{ d[0] }}</th>
+					<th scope="row">{{ d[1] }}</th>
+					<th scope="row">{{ d[2] }}</th>
+					<th scope="row">{{ d[3] }}</th>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+</html>
